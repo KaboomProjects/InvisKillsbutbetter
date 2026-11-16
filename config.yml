@@ -1,0 +1,31 @@
+# Corruption mode:
+#   HIDDEN     -> killer name is replaced by "hidden-name"
+#   OBFUSCATED -> killer name is shown with Minecraft's obfuscated (&k) format
+#   GLITCH     -> killer name is replaced by random characters (new on every kill)
+#   CUSTOM     -> the whole death message is replaced by "custom-format"
+mode: GLITCH
+
+# Used in HIDDEN mode
+hidden-name: "Unknown"
+
+# Used in CUSTOM mode. Placeholders: %killer% and %victim% (real names). Use & for colors.
+custom-format: "&k???&r was slain by &k???"
+
+# Length of the random name in GLITCH mode
+glitch-length: 6
+
+# Also corrupt the victim's name when the VICTIM is on the list
+corrupt-victim: false
+
+messages:
+  prefix: "&8[&cKillCorrupt&8] &r"
+  added: "&aPlayer &f%player% &anow has corrupted kill messages."
+  removed: "&cPlayer &f%player% &cno longer has corrupted kill messages."
+  already: "&e%player% is already on the list."
+  not-on-list: "&e%player% is not on the list."
+  list-header: "&7Corrupted players (&f%count%&7):"
+  list-empty: "&7No players are corrupted."
+  unknown-player: "&cUnknown player: &f%player%"
+  reloaded: "&aConfig and data reloaded."
+  usage: "&7Usage: &f/killcorrupt <add|remove|list|toggle|reload> [player]"
+  no-permission: "&cYou do not have permission."

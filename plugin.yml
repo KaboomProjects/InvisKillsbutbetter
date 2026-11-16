@@ -1,0 +1,15 @@
+name: KillCorrupt
+version: '${project.version}'
+main: dev.killcorrupt.KillCorrupt
+api-version: '1.21'
+description: Corrupts the kill messages of selected players without effects or invisibility.
+commands:
+  killcorrupt:
+    description: Manage players with corrupted kill messages
+    usage: /killcorrupt <add|remove|list|toggle|reload> [player]
+    aliases: [kc]
+    permission: killcorrupt.use
+permissions:
+  killcorrupt.use:
+    description: Allows using /killcorrupt
+    default: op
